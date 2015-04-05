@@ -1,8 +1,19 @@
+# Please note
+
+This is but a convenience fork of https://github.com/drewda/cucumber-sublime-bundle for use as a repo for my Boxen setup as:
+
+- The original `master` holds the Sublime 2 version. The Sublime 3 version is on a branch (`st3`).
+- Boxen's Sublime module will only pull Sublime Plugins from the `master` of Github repos
+
+The sole purpose of this repo is to hold the original repo's `st3` branch on `master`, so it's pullable by Boxen's sublime module.
+
+**Please direct all PRs, requests and credit to [the original repo](https://github.com/drewda/cucumber-sublime-bundle)**
+
 # cucumber-sublime-bundle
 
 A bundle for [Sublime Text](http://www.sublimetext.com/) that provides syntax coloring and snippets for [Cucumber](http://cukes.info/) and its [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) language.
 
-Work with both ST2 and ST3. For ST2, see [the `master` branch](https://github.com/drewda/cucumber-sublime-bundle/tree/master).
+Works with ST3 only.
 
 ## Installation: ST3
 
@@ -10,13 +21,13 @@ Work with both ST2 and ST3. For ST2, see [the `master` branch](https://github.co
     Search for cucumber sublime bundle
 ### From source - Mac OSX
     cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-    git clone -b st3 git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
+    git clone git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
 ### From source - Linux
     cd ~/.config/sublime-text-3/Installed Packages
-    git clone -b st3 git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
+    git clone git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
 ### From source - Windows
     cd Users/<user>/AppData/Roaming/Sublime\ Text\ 3/Installed Packages/
-    git clone -b st3 git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
+    git clone git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
 
 Restart Sublime Text.
 
