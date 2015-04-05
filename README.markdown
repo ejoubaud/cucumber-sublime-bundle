@@ -2,21 +2,21 @@
 
 A bundle for [Sublime Text](http://www.sublimetext.com/) that provides syntax coloring and snippets for [Cucumber](http://cukes.info/) and its [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) language.
 
-Work with both ST2 and ST3. For ST3, see [the `st3` branch](https://github.com/drewda/cucumber-sublime-bundle/tree/st3).
+Work with both ST2 and ST3. For ST2, see [the `master` branch](https://github.com/drewda/cucumber-sublime-bundle/tree/master).
 
-## Installation: ST2
+## Installation: ST3
 
 ### Automatic - via Package Control
     Search for cucumber sublime bundle
-### Mac OSX
-    cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
-    git clone git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
-### Linux
-    cd ~/.config/sublime-text-2/Packages
-    git clone git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
-### Windows
-    cd Users/<user>/AppData/Roaming/Sublime\ Text\ 2/Packages/
-    git clone git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
+### From source - Mac OSX
+    cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+    git clone -b st3 git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
+### From source - Linux
+    cd ~/.config/sublime-text-3/Installed Packages
+    git clone -b st3 git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
+### From source - Windows
+    cd Users/<user>/AppData/Roaming/Sublime\ Text\ 3/Installed Packages/
+    git clone -b st3 git://github.com/drewda/cucumber-sublime-bundle.git Cucumber
 
 Restart Sublime Text.
 

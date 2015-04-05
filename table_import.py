@@ -1,5 +1,4 @@
 # Author: Andrei Misarca
-
 import os.path
 import sys
 
@@ -7,7 +6,7 @@ this_dir = os.path.dirname(os.path.realpath(__file__))
 if this_dir not in sys.path:
     sys.path += [this_dir]
 
-import table_commons
+from . import table_commons
 
 
 class TableImportCommand(table_commons.TextCommand):
@@ -39,7 +38,7 @@ class TableImportCommand(table_commons.TextCommand):
             # Count the separators, in order to compute the new length of the
             # line.
             seps_no = 0
-            for j in xrange(len(line[1])):
+            for j in range(len(line[1])):
                 if line[1][j].startswith('\t'):
                     seps_no += 1
                     self.insert_separator_at(line[0], j+1)

@@ -8,7 +8,7 @@ this_dir = os.path.dirname(os.path.realpath(__file__))
 if this_dir not in sys.path:
     sys.path += [this_dir]
 
-import table_commons
+from . import table_commons
 
 
 class TableCleanerCommand(table_commons.TextCommand):
@@ -83,7 +83,7 @@ class TableCleanerCommand(table_commons.TextCommand):
             else:
                 temp_line = []
                 last_i = 0
-                for i in xrange(len(line[1])):
+                for i in range(len(line[1])):
                     if line[1][i] == separator and line[1][i-1] != "\\":
                         temp_line.append(line[1][last_i:i])
                         last_i = i+1
@@ -100,7 +100,7 @@ class TableCleanerCommand(table_commons.TextCommand):
 
     # Create a generator that yields the separators from a line
     def orig_separators(self, line):
-        for i in xrange(len(line)):
+        for i in range(len(line)):
             for sep in self.separators:
                 if line[i:].startswith(sep):
                     yield sep
@@ -112,15 +112,15 @@ class TableCleanerCommand(table_commons.TextCommand):
         it = self.orig_separators(orig_line)
         new_line = list(line)
 
-        for i in xrange(len(new_line)):
+        for i in range(len(new_line)):
             if new_line[i] == self.SEPARATOR:
-                new_line = new_line[:i] + [it.next()] + new_line[i+1:]
+                new_line = new_line[:i] + [next(it)] + new_line[i+1:]
 
         return "".join(new_line)
 
     def restore_lines(self, lines, orig_lines):
         # print(orig_lines)
-        for i in xrange(len(lines)):
+        for i in range(len(lines)):
             lines[i][1] = self.restore_line(self.SEPARATOR.join(lines[i][1]),
                                             orig_lines[i][1])
         return lines
@@ -133,14 +133,14 @@ class TableCleanerCommand(table_commons.TextCommand):
         rows_size = len(lines)
         cols_size = min([len(line[1]) for line in lines])
 
-        for col in xrange(0, cols_size):
+        for col in range(0, cols_size):
             max_len = 0
 
             # Find the largest cell on the current column
-            for row in xrange(0, rows_size):
+            for row in range(0, rows_size):
                 max_len = max(max_len, len(lines[row][1][col].strip()))
 
-            for row in xrange(0, rows_size):
+            for row in range(0, rows_size):
                 cell = lines[row][1][col].strip()
 
                 diff = max_len - len(cell)
